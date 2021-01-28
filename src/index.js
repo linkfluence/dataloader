@@ -238,8 +238,7 @@ var enqueuePostPromiseJob =
       resolvedPromise.then(() => {
         process.nextTick(fn);
       });
-    } :
-    setImmediate || setTimeout;
+    } : setTimeout;
 
 // Private: cached resolved Promise instance
 var resolvedPromise;
